@@ -15,12 +15,14 @@ totalstepsPD <- tapply(activity$steps, activity$date,sum)
 ```{r}
 hist(totalstepsPD,xlab="Steps per Day", main="Total Number of Steps Per Day")
 ```
+![plot of Total Numbers of Steps per day](figure/Total Numbers of Steps per day.png) 
 
 2.Calculate the mean and median total number of steps taken per day
 Mean:
 ```{r}
 mean(totalstepsPD,na.rm=TRUE)
 ```
+
 Median:
 ```{r}
 median(totalstepsPD,na.rm=TRUE)
@@ -38,6 +40,7 @@ plot(steps_interval,
      main="Average Steps at 5-minute Intervals",
      type="l")
 ```
+![plot of Avg Steps at 5-min Intervals](figure/Avg Steps at 5-min Intervals.png) 
 
 2.Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 ```{r}
@@ -82,6 +85,8 @@ hist(totalstepsPD_new,
      xlab="Steps per Day", 
      main="Imputed Total Number of Steps Per Day")
 ```
+![plot of Imputed Total Number of Steps per day](figure/Imputed Total Number of Steps per day.png) 
+
 Calculate and report the mean and median total number steps taken per day.
 Mean:
 ```{r}
@@ -129,5 +134,5 @@ png(filename = 'panel_plot.png', width=480, height=480)
 plot(panel)
 dev.off()
 ```
-
+![plot of panel_plot](figure/panel_plot.png) 
 
