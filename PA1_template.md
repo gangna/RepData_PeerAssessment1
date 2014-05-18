@@ -19,17 +19,13 @@ hist(totalstepsPD,xlab="Steps per Day", main="Total Number of Steps Per Day")
 
 2.Calculate the mean and median total number of steps taken per day
 
-Mean:
 ```{r}
 mean(totalstepsPD,na.rm=TRUE)
-```
-[1] 10766.19
-
-Median:
-```{r}
 median(totalstepsPD,na.rm=TRUE)
 ```
-[1] 10765
+The mean   of total number steps taken per day is 10766.19
+The median of total number steps taken per day is 10765
+
 
 
 ## What is the average daily activity pattern?
@@ -48,7 +44,7 @@ plot(steps_interval,
 ```{r}
 steps_interval[which.max(steps_interval$steps),]$interval
 ```
-[1] 835
+The 5-minute interval, containing the maximum number of steps, is 835.
 
 ## Imputing missing values
 Note that there are a number of days/intervals where there are missing values (coded as NA). The presence of missing days may introduce bias into some calculations or summaries of the data.
@@ -57,7 +53,7 @@ Note that there are a number of days/intervals where there are missing values (c
 ```{r}
 sum(is.na(activity$steps))
 ```
-[1] 2304
+The total number of NAs in the dataset is 2304.
 
 2.Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 ```{r}
@@ -92,19 +88,12 @@ hist(totalstepsPD_new,
 
 Calculate and report the mean and median total number steps taken per day.
 
-Mean:
 ```{r}
 mean(totalstepsPD_new,na.rm=TRUE)
-```
-[1] 10766.19
-(the same as previous one.)
-
-Median:
-```{r}
 median(totalstepsPD_new,na.rm=TRUE)
 ```
-[1] 10766.19
-(slightly differs from before-imputation.)
+The mean   of imputed dataset is 10766.19 (the same as previous one.)
+The median of imputed dataset is 10766.19 (slightly differs from before-imputation.)
 
 ## Are there differences in activity patterns between weekdays and weekends?
 For this part the weekdays() function may be of some help here. Use the dataset with the filled-in missing values for this part.
