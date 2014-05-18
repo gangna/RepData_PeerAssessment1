@@ -24,6 +24,7 @@ mean(totalstepsPD,na.rm=TRUE)
 median(totalstepsPD,na.rm=TRUE)
 ```
 The mean   of total number steps taken per day is 10766.19
+
 The median of total number steps taken per day is 10765
 
 
@@ -93,6 +94,7 @@ mean(totalstepsPD_new,na.rm=TRUE)
 median(totalstepsPD_new,na.rm=TRUE)
 ```
 The mean   of imputed dataset is 10766.19 (the same as previous one.)
+
 The median of imputed dataset is 10766.19 (slightly differs from before-imputation.)
 
 ## Are there differences in activity patterns between weekdays and weekends?
